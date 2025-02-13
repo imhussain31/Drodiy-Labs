@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drodify Labs - Premium Android Apps</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+    body   {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+.navbar {
+    background: rgba(255, 255, 255, 0.9) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #2c3e50 !important;
+}
+.nav-link {
+    color: #2c3e50 !important;
+    font-weight: 500;
+}
+.nav-link:hover {
+    color: #3498db !important;
+}
+.btn-info {
+    background-color: #3498db;
+    border: none;
+    padding: 10px 20px;
+    font-weight: 600;
+}
+.btn-info:hover {
+    background-color: #2980b9;
+}
+#home-section {
+    background: linear-gradient(135deg, #3498db, #2c3e50);
+    color: #fff;
+    padding: 100px 0;
+}
+#home-section h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+#home-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+#home-section a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 5px;
+}
+#home-section a:hover {
+    color: #f1c40f;
+    border-color: #f1c40f;
+}
+.card {
+    border: none;
+    background: transparent;
+}
+.card-img-top {
+    border-radius: 10px;
+}
+.featured-apps {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+.featured-apps h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.app-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.app-card:hover {
+    transform: translateY(-10px);
+}
+.app-card img {
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.app-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.app-card p {
+    font-size: 1rem;
+    color: #666;
+}
+.testimonials {
+    padding: 80px 0;
+    background: #fff;
+}
+.testimonials h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.testimonial-card {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+.testimonial-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+.testimonial-card p {
+    font-size: 1rem;
+    color: #666;
+}
+.testimonial-card h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.featured-apps {
+padding: 80px 0;
+background: #f8f9fa;
+}
+
+.app-card {
+background: #fff;
+border-radius: 10px;
+overflow: hidden;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.app-card:hover {
+transform: translateY(-10px);
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.app-image {
+width: 100%;
+height: 200px;
+object-fit: fill;
+}
+
+.app-content {
+padding: 20px;
+}
+
+.app-title {
+font-size: 1.5rem;
+font-weight: 600;
+color: #2c3e50;
+margin-bottom: 10px;
+}
+
+.app-description {
+font-size: 1rem;
+color: #666;
+line-height: 1.5;
+margin-bottom: 15px;
+}
+
+.app-details {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 15px;
+}
+
+.app-status {
+font-size: 1rem;
+color: #28a745;
+font-weight: 600;
+}
+
+.app-price {
+font-size: 1.25rem;
+color: #333;
+font-weight: 700;
+}
+
+.app-button {
+display: inline-block;
+width: 100%;
+padding: 10px 20px;
+background: #3498db;
+color: #fff;
+text-align: center;
+text-decoration: none;
+border-radius: 5px;
+transition: background 0.3s ease;
+}
+
+.app-button:hover {
+background: #2980b9;
+}
+.contact-section {
+    background: #f8f9fa;
+    padding: 60px 0;
+    border-radius: 10px;
+}
+.contact-section h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+.contact-section p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+.contact-section .btn-primary {
+    background-color: #3498db;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+.contact-section .btn-primary:hover {
+    background-color: #2980b9;
+}
+.footer {
+    background: #2c3e50;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+.highlight {
+    color: #ff6f00;
+    font-weight: bold;
+}
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #ff6f00, #e65c00);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 18px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 111, 0, 0.3);
+}
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 111, 0, 0.4);
+}
+.app-ratings {
+display: flex;
+align-items: center;
+margin-bottom: 10px;
+}
+
+.stars {
+color: #ffc107;
+margin-right: 5px;
+}
+
+.rating-value {
+font-weight: bold;
+margin-right: 5px;
+color: #333;
+}
+
+.rating-count {
+font-size: 0.85rem;
+color: #666;
+}
+
+.app-sales {
+display: flex;
+align-items: center;
+margin-bottom: 15px;
+color: #666;
+font-size: 0.9rem;
+}
+
+.sales-icon {
+margin-right: 5px;
+color: #28a745;
+}
+
+.about-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+.about-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+.about-description {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+.about-description strong {
+    color: #2c3e50;
+}
+.about-image {
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.btn-primary {
+    background-color: #3498db;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+.btn-primary:hover {
+    background-color: #2980b9;
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light bg-transparent" id="gtco-main-nav">
+        <div class="container">
+            <a class="navbar-brand" href="#home-section">Drodify Labs</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#my-nav" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="my-nav" class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home-section">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#featured-app-section">Android Apps</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects-section">Our Live Projects</a></li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <a href="#about-section" class="btn btn-info my-2 my-sm-0 mr-3 text-uppercase">About Us</a>
+                    <a href="#contact-section" class="btn btn-info my-2 my-sm-0 mr-3 text-uppercase">Contact</a>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home-section">
+        <div class="container-fluid gtco-banner-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h1> Discover & Own My interactive Android Apps </h1>
+                        <p> Explore a collection of innovative, high-performance Android apps designed to enhance your digital experience. Buy directly from the source! </p>
+                        <a href="#contact-section">Get Yours Now <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="images/banner-img.png" alt="Android App Development">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Apps Section -->
+<section class="featured-apps" id="featured-app-section">
+    <div class="container">
+        <h2 style="font-size: 2.5rem; font-weight: 700; text-align: center; margin-bottom: 40px; color: #2c3e50;">Featured Apps</h2>
+        <div class="row justify-content-center">
+            <!-- App Card 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="app-card">
+                    <img src="images/app_4.png" alt="App 1" class="app-image">
+                    <div class="app-content">
+                        <h3 class="app-title">SimpleWeather</h3>
+                        <p class="app-description">
+                            SimpleWeather is a user-friendly weather app with live updates, 5-day forecasts, and GPS location, designed for travelers and outdoor lovers!
+                        </p>
+
+                        <!-- Ratings Section -->
+                        <div class="app-ratings">
+                            <span class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </span>
+                            <span class="rating-value">4.5</span>
+                            <span class="rating-count">(7 reviews)</span>
+                        </div>
+            
+                        <!-- Sales Information -->
+                        <div class="app-sales">
+                            <span class="sales-icon"><i class="fas fa-chart-line"></i></span>
+                            <span class="sales-text">9+ sales</span>
+                        </div>
+
+                        <div class="app-details">
+                            <span class="app-status">Available</span>
+                            <span class="app-price">৳ 2,000</span>
+                        </div>
+                        <a href="simpleWeather-app-details.html" class="app-button">
+                            Details <i class="fas fa-angle-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- App Card 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="app-card">
+                    <img src="images/app_5.png" alt="App 2" class="app-image">
+                    <div class="app-content">
+                        <h3 class="app-title">Magic Book</h3>
+
+                        <p class="app-description">
+                            Magic Book is an interactive app for kids to explore, customize, and share engaging stories effortlessly
+                        </p>
+
+                        <!-- Ratings Section -->
+                        <div class="app-ratings">
+                            <span class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </span>
+                            <span class="rating-value">4.5</span>
+                            <span class="rating-count">(5 reviews)</span>
+                        </div>
+            
+                        <!-- Sales Information -->
+                        <div class="app-sales">
+                            <span class="sales-icon"><i class="fas fa-chart-line"></i></span>
+                            <span class="sales-text">7+ sales</span>
+                        </div>
+
+                        <div class="app-details">
+                            <span class="app-status">Available</span>
+                            <span class="app-price">৳ 1,000</span>
+                        </div>
+                        <a href="magic-book-app-details.html" class="app-button">
+                            Details <i class="fas fa-angle-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- App Card 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="app-card">
+                    <img src="images/app_6.png" alt="App 3" class="app-image">
+                    <div class="app-content">
+                        <h3 class="app-title">Sunnah App</h3>
+                        <p class="app-description">
+                            Your ultimate companion for exploring, learning, and sharing authentic Sunnah teachings with ease and clarity
+                        </p>
+
+                        <!-- Ratings Section -->
+                        <div class="app-ratings">
+                            <span class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </span>
+                            <span class="rating-value">4.5</span>
+                            <span class="rating-count">(10 reviews)</span>
+                        </div>
+            
+                        <!-- Sales Information -->
+                        <div class="app-sales">
+                            <span class="sales-icon"><i class="fas fa-chart-line"></i></span>
+                            <span class="sales-text">15+ sales</span>
+                        </div>
+
+                        <div class="app-details">
+                            <span class="app-status">Available</span>
+                            <span class="app-price">৳ 500</span>
+                        </div>
+                        <a href="sunnah-app-details.html" class="app-button">
+                            Details <i class="fas fa-angle-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- App Card 4 -->
+            <div class="col-md-4 mb-4">
+                <div class="app-card">
+                    <img src="images/hmbanner.png" alt="App 3" class="app-image">
+                    <div class="app-content">
+                        <h3 class="app-title">Health Metrics</h3>
+                        <p class="app-description">
+                            Track your fitness journey effortlessly with Health Metrics, the ultimate app for workout plans, nutrition tracking, and achieving your health goals.
+                        </p>
+
+                        <!-- Ratings Section -->
+                        <div class="app-ratings">
+                            <span class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </span>
+                            <span class="rating-value">4.5</span>
+                            <span class="rating-count">(10 reviews)</span>
+                        </div>
+            
+                        <!-- Sales Information -->
+                        <div class="app-sales">
+                            <span class="sales-icon"><i class="fas fa-chart-line"></i></span>
+                            <span class="sales-text">20+ sales</span>
+                        </div>
+
+                        <div class="app-details">
+                            <span class="app-status">Available</span>
+                            <span class="app-price">৳ 1,000</span>
+                        </div>
+                        <a href="health-app-details.html" class="app-button">
+                            Details <i class="fas fa-angle-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- App Card 5 -->
+            <div class="col-md-4 mb-4">
+                <div class="app-card">
+                    <img src="images/hmbanner.png" alt="App 3" class="app-image">
+                    <div class="app-content">
+                        <h3 class="app-title">E2B Dictionary</h3>
+                        <p class="app-description">
+                            Track your fitness journey effortlessly with Health Metrics, the ultimate app for workout plans, nutrition tracking, and achieving your health goals.
+                        </p>
+
+                        <!-- Ratings Section -->
+                        <div class="app-ratings">
+                            <span class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </span>
+                            <span class="rating-value">4.5</span>
+                            <span class="rating-count">(5 reviews)</span>
+                        </div>
+            
+                        <!-- Sales Information -->
+                        <div class="app-sales">
+                            <span class="sales-icon"><i class="fas fa-chart-line"></i></span>
+                            <span class="sales-text">10+ sales</span>
+                        </div>
+
+                        <div class="app-details">
+                            <span class="app-status">Available</span>
+                            <span class="app-price">৳ 1,000</span>
+                        </div>
+                        <a href="health-app-details.html" class="app-button">
+                            Details <i class="fas fa-angle-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- App Card 6 -->
+            <div class="col-md-4 mb-4">
+                <div class="app-card">
+                    <img src="images/hmbanner.png" alt="App 3" class="app-image">
+                    <div class="app-content">
+                        <h3 class="app-title">Daily Notes</h3>
+                        <p class="app-description">
+                            Track your fitness journey effortlessly with Health Metrics, the ultimate app for workout plans, nutrition tracking, and achieving your health goals.
+                        </p>
+
+                        <!-- Ratings Section -->
+                        <div class="app-ratings">
+                            <span class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </span>
+                            <span class="rating-value">4.5</span>
+                            <span class="rating-count">(5 reviews)</span>
+                        </div>
+            
+                        <!-- Sales Information -->
+                        <div class="app-sales">
+                            <span class="sales-icon"><i class="fas fa-chart-line"></i></span>
+                            <span class="sales-text">10+ sales</span>
+                        </div>
+
+                        <div class="app-details">
+                            <span class="app-status">Available</span>
+                            <span class="app-price">৳ 1,000</span>
+                        </div>
+                        <a href="health-app-details.html" class="app-button">
+                            Details <i class="fas fa-angle-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <img src="images/drodify-labs.png" alt="Client 1">
+                        <p>"Drodify Labs delivered an outstanding app that exceeded our expectations. Highly recommended!"</p>
+                        <h4>Shuvo</h4>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <img src="images/drodify-labs.png" alt="Client 2">
+                        <p>"The team was professional and responsive. Our app was developed on time and within budget."</p>
+                        <h4>Arafat</h4>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <img src="images/drodify-labs.png" alt="Client 3">
+                        <p>"We are thrilled with the results. The app has significantly improved our business operations."</p>
+                        <h4>Nihan</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- About Section -->
+<section class="about-section" id="about-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>About Us</h2>
+                <p class="about-description">
+                    At <strong>Drodify Labs</strong>, we are passionate about creating innovative and user-friendly applications that make a difference in people's lives. Our mission is to deliver high-quality software solutions that are not only functional but also intuitive and enjoyable to use.
+                </p>
+                <p class="about-description">
+                    With a team of experienced developers and designers, we specialize in building Android apps that cater to a wide range of needs—from health and fitness to education and entertainment. Whether you're looking for a powerful tool to track your health metrics or an engaging app for kids to explore stories, we’ve got you covered.
+                </p>
+                <p class="about-description">
+                    We believe in the power of technology to transform ideas into reality. Our apps are designed to be lightweight, fast, and easy to use, ensuring a seamless experience for every user. Let us help you achieve your goals with our cutting-edge solutions.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <img src="images/drodify-labs.png" alt="About Us" class="img-fluid about-image">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Contact Section -->
+    <section class="contact-section"  id="contact-section">
+        <div class="container">
+            <h3>Interested in Buying Apps?</h3>
+            <p>
+                Contact us today to purchase Apps. Our team is here to assist you!
+            </p>
+            <div class="contact-buttons">
+                <!-- Call Button -->
+                <a href="tel:+8801690143931" class="btn btn-call">
+                    <i class="fas fa-phone"></i> Call Us
+                </a>
+                <!-- WhatsApp Button -->
+                <a href="https://wa.me/8801690143931" class="btn btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Drodify Labs. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

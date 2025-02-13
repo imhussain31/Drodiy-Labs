@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Details - Drodify Labs</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+.navbar {
+    background: rgba(255, 255, 255, 0.9) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #2c3e50 !important;
+}
+.nav-link {
+    color: #2c3e50 !important;
+    font-weight: 500;
+}
+.nav-link:hover {
+    color: #3498db !important;
+}
+.app-details-section {
+    padding: 80px 0;
+}
+.app-banner {
+    width: 100%;
+    height: 500px;
+    object-fit: fill;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+.app-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+.app-status {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.app-status.in-stock {
+    color: #28a745;
+}
+.app-status.out-of-stock {
+    color: #dc3545;
+}
+.app-description {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+.app-screenshots {
+    margin-bottom: 40px;
+}
+.app-screenshots img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.contact-section {
+    background: #f8f9fa;
+    padding: 60px 0;
+    border-radius: 10px;
+}
+.contact-section h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+.contact-section p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+.contact-section .btn-primary {
+    background-color: #3498db;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+.contact-section .btn-primary:hover {
+    background-color: #2980b9;
+}
+.footer {
+    background: #2c3e50;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.highlight {
+    color: #ff6f00;
+    font-weight: bold;
+}
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #ff6f00, #e65c00);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 18px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 111, 0, 0.3);
+}
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 111, 0, 0.4);
+}
+.feature-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.feature-list li {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: #444;
+}
+.feature-list li:last-child {
+    border-bottom: none;
+}
+.feature-list li strong {
+    margin-left: 10px;
+}
+.feature-list li::before {
+    content: "✔️";
+    margin-right: 10px;
+    color: #ff6f00;
+}
+h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+ul {
+    padding-left: 20px;
+}
+ul li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #555;
+}
+.app-ratings {
+display: flex;
+align-items: center;
+margin-bottom: 10px;
+}
+
+.stars {
+color: #ffc107;
+margin-right: 5px;
+}
+
+.rating-value {
+font-weight: bold;
+margin-right: 5px;
+color: #333;
+}
+
+.rating-count {
+font-size: 0.85rem;
+color: #666;
+}
+
+.app-sales {
+display: flex;
+align-items: center;
+margin-bottom: 15px;
+color: #666;
+font-size: 0.9rem;
+}
+
+.sales-icon {
+margin-right: 5px;
+color: #28a745;
+}
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light bg-transparent">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Drodify Labs</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contect-section">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- App Details Section -->
+    <section class="app-details-section">
+        <div class="container">
+            <!-- App Banner -->
+            <img src="images/app_4.png" alt="App Banner" class="app-banner">
+
+            <!-- App Title and Status -->
+            <h1 class="app-title">SimpleWeather</h1>
+            <div class="app-status in-stock">Available</div>
+<!-- Ratings Section -->
+<div class="app-ratings">
+    <span class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+    </span>
+    <span class="rating-value">4.5</span>
+    <span class="rating-count">(7 reviews)</span>
+</div>
+
+<!-- Sales Information -->
+<div class="app-sales">
+    <span class="sales-icon"><i class="fas fa-chart-line"></i></span>
+    <span class="sales-text">9+ downloads</span>
+</div>
+            <!-- App Description -->
+            <div class="app-description"  id="features">
+                <h2>App Features:</h2>
+
+                
+        <ul class="feature-list">
+            <li><strong>Live Weather Updates</strong> - Instant weather data at your fingertips</li>
+            <li><strong>5-Day Forecast</strong> - Plan ahead with accurate hourly & daily forecasts</li>
+            <li><strong>GPS Auto Location</strong> - Get weather updates based on your current location</li>
+            <li><strong>City Search</strong> - Find weather details of any city worldwide</li>
+            <li><strong>Real-Time Date & Time</strong> - Always stay updated with time & date</li>
+            <li><strong>Beautiful UI</strong> - Elegant & intuitive design with smooth navigation</li>
+            <li><strong>Banner Ads Support</strong> - Monetize easily with AdMob integration</li>
+            <li><strong>Lightweight & Fast</strong> - Optimized for minimal battery & data usage</li>
+        </ul>
+        
+        <h2>💰 Pricing & Benefits</h2>
+        <p>
+            ✅ Affordable pricing starting from <span class="highlight">৳ 2,000</span> <br>
+            ✅ <strong>Fully customizable</strong> source code <br>
+            ✅ One-time payment, <span class="highlight">no subscription required!</span>
+        </p>
+
+        <div style="text-align: center;">
+            <a href="#contect-section" class="btn">Buy Now</a>
+        </div>
+        
+        <h2>📌 What You Get:</h2>
+        <ul>
+            <li>Full Android Source Code (Java)</li>
+            <li>Documentation for Easy Setup</li>
+            <li>Free Updates & Support</li>
+        </ul>
+            </div>
+
+            <!-- App Screenshots -->
+            <div class="app-screenshots">
+                <h2>App Screenshots</h2>
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="images/w_s (1).png" alt="Screenshot 1">
+                    </div>
+                    <div class="col-md-3">
+                        <img src="images/w_s (2).png" alt="Screenshot 2">
+                    </div>
+                    <div class="col-md-3">
+                        <img src="images/w_s (3).png" alt="Screenshot 3">
+                    </div>
+                    <div class="col-md-3">
+                        <img src="images/w_s (4).png" alt="Screenshot 4">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contect-section">
+        <div class="container">
+            <h3>Interested in Buying This App?</h3>
+            <p>
+                Contact us today to purchase the SimpleWeather or to learn more about its features. Our team is here to assist you!
+            </p>
+            <div class="contact-buttons">
+                <!-- Call Button -->
+                <a href="tel:+8801690143931" class="btn btn-call">
+                    <i class="fas fa-phone"></i> Call Us
+                </a>
+                <!-- WhatsApp Button -->
+                <a href="https://wa.me/8801690143931" class="btn btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Drodify Labs. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
