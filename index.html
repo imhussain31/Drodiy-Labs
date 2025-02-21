@@ -25,7 +25,7 @@
             font-weight: 500;
         }
         .nav-link:hover {
-            color: #3498db !important;
+            color: #007bff !important;
         }
         .btn-info {
             background-color: #3498db;
@@ -42,7 +42,7 @@
             padding: 100px 0;
         }
         #home-section h1 {
-            font-size: 3rem;
+            font-size: 2rem;
             font-weight: 600;
             margin-bottom: 20px;
         }
@@ -197,7 +197,7 @@
         display: inline-block;
         width: 100%;
         padding: 10px 20px;
-        background: #3498db;
+        background: #007bff;
         color: #fff;
         text-align: center;
         text-decoration: none;
@@ -206,7 +206,7 @@
         }
 
         .app-button:hover {
-        background: #2980b9;
+        background: #007bff;
         }
         .contact-section {
             background: #f8f9fa;
@@ -323,7 +323,7 @@
 
 
         .btn-primary {
-            background-color: #3498db;
+            background-color: #007bff;
             border: none;
             padding: 12px 30px;
             font-size: 1.1rem;
@@ -427,6 +427,101 @@
             padding-top: 20px;
             border-top: 1px solid #444;
         }
+        /* Categories Container */
+        .categories-container {
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .categories {
+            display: flex;
+            overflow-x: auto;
+            gap: 10px;
+            padding-bottom: 20px;
+            padding-top: 20px;
+            padding-left: 5px;
+            padding-right: 5px;
+            scroll-behavior: smooth;
+        }
+
+        .categories::-webkit-scrollbar {
+            height: 8px;
+            background-color: #f8f9fa;
+        }
+
+        .categories::-webkit-scrollbar-thumb {
+            background-color: #007bff;
+            border-radius: 10px;
+        }
+
+      /* Category Cards */
+      .category {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 10px;
+          background-color: #ffffff;
+          border-radius: 10px;
+          min-width: 120px;
+          text-align: center;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .category:hover {
+          background-color: #007bff;
+          transform: translateY(-5px);
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      .category:hover i,
+      .category:hover span {
+          color: #ffffff;
+      }
+
+      .category i {
+          font-size: 1.8rem;
+          margin-bottom: 10px;
+          color: #007bff;
+          transition: color 0.3s ease;
+      }
+
+      .category span {
+          font-size: 0.9rem;
+          font-weight: 500;
+          color: #333;
+          transition: color 0.3s ease;
+      }
+
+      /* Navigation Arrows (Optional) */
+      .categories-container .scroll-btn {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          background-color: rgba(0, 0, 0, 0.7);
+          color: white;
+          border: none;
+          padding: 10px;
+          cursor: pointer;
+          border-radius: 50%;
+          font-size: 1.5rem;
+          z-index: 1;
+          transition: background-color 0.3s ease;
+      }
+
+      .categories-container .scroll-btn:hover {
+          background-color: rgba(0, 0, 0, 0.9);
+      }
+
+      .categories-container .left-btn {
+          left: -20px;
+      }
+
+      .categories-container .right-btn {
+          right: -20px;
+      }
     </style>
 </head>
 <body>
@@ -473,9 +568,60 @@
     <!-- Featured Apps Section -->
     <section class="featured-apps" id="featured-app-section">
         <div class="container">
-          <h2 style="font-size: 2.5rem; font-weight: 700; text-align: center; margin-bottom: 40px; color: #2c3e50;">
+          <h2 style="font-size: 2rem; font-weight: 600; text-align: left; margin-bottom: 10px; color: #2c3e50;">
             Custom Featured Apps
           </h2>
+              <!-- Quick Access Categories -->
+            <div class="categories-container">
+              <div class="categories">
+                  <div class="category">
+                      <i class="fas fa-cloud-sun"></i>
+                      <span>Weather Apps</span>
+                  </div>
+                  <div class="category">
+                      <i class="fas fa-heartbeat"></i>
+                      <span>Health & Fitness</span>
+                  </div>
+                  <div class="category">
+                      <i class="fas fa-book-open"></i>
+                      <span>Education</span>
+                  </div>
+                  <div class="category">
+                      <i class="fas fa-tasks"></i>
+                      <span>Productivity</span>
+                  </div>
+                  <div class="category">
+                      <i class="fas fa-film"></i>
+                      <span>Entertainment</span>
+                  </div>
+                  <div class="category">
+                      <i class="fas fa-plane"></i>
+                      <span>Travel</span>
+                  </div>
+                  <div class="category">
+                      <i class="fas fa-wallet"></i>
+                      <span>Finance</span>
+                  </div>
+                  <div class="category">
+                      <i class="fas fa-comments"></i>
+                      <span>Social</span>
+                  </div>
+                  <div class="category">
+                      <i class="fas fa-child"></i>
+                      <span>Kids & Family</span>
+                  </div>
+                  <div class="category">
+                      <i class="fas fa-tools"></i>
+                      <span>Utilities</span>
+                  </div>
+                  <div class="category">
+                      <i class="fas fa-mosque"></i>
+                      <span>Islamic</span>
+                  </div>
+              </div>
+          </div>
+          
+
           <div class="row justify-content-center" id="app-cards-container">
             <!-- App Card 1 -->
             <div class="col-md-4 mb-4">
@@ -884,6 +1030,7 @@
         </div>
     </footer>
 
+    
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
